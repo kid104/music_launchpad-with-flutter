@@ -4,10 +4,10 @@ import 'package:flutter_soloud/flutter_soloud.dart';
 // One file per pad: column 1 top to bottom (0-4), column 2 (5-9), column 3 (10-14), column 4 (15-19)
 const soundPaths = [
   'assets/snare.mp3', // 0
-  'assets/kick.mp3', // 1
-  'assets/hat.mp3', // 2
-  'assets/clap.mp3', // 3
-  'assets/tom.mp3', // 4
+  'assets/hihat.mp3', // 1
+  'assets/crash.mp3', // 2
+  'assets/distorted808.mp3', // 3
+  'assets/deepkick.mp3', // 4
   // ...continue to 19
 ];
 
@@ -49,315 +49,103 @@ class LaunchPad extends StatelessWidget {
             Expanded(
               child: Row(
                 children: [
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(0),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(1),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(2),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(3),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(4),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(5),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(6),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(7),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(8),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(9),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(10),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(11),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(12),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(13),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(14),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(15),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(16),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(17),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(18),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.zero,
-                            ),
-                            onPressed: () => hit(19),
-                            child: Image.asset(
-                              'assets/red.png',
-                              fit: BoxFit.fill,
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  LaunchPadColumn(
+                    hits: [0, 1, 2, 3, 4],
+                    backgroundimage: 'assets/red.png',
+                  ).buildColumn(),
+                  LaunchPadColumn(
+                    hits: [0, 1, 2, 3, 4],
+                    backgroundimage: 'assets/green.png',
+                  ).buildColumn(),
+                  LaunchPadColumn(
+                    hits: [0, 1, 2, 3, 4],
+                    backgroundimage: 'assets/blue.png',
+                  ).buildColumn(),
+                  LaunchPadColumn(
+                    hits: [0, 1, 2, 3, 4],
+                    backgroundimage: 'assets/yellow.png',
+                  ).buildColumn(),
                 ],
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class LaunchPadColumn {
+  List<int> hits = [];
+  String backgroundimage = '';
+
+  LaunchPadColumn({required this.hits, required this.backgroundimage});
+
+  Widget buildColumn() {
+    return Expanded(
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            child: TextButton(
+              style: TextButton.styleFrom(padding: EdgeInsets.zero),
+              onPressed: () => hit(hits[0]),
+              child: Image.asset(
+                backgroundimage,
+                fit: BoxFit.fill,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              style: TextButton.styleFrom(padding: EdgeInsets.zero),
+              onPressed: () => hit(hits[1]),
+              child: Image.asset(
+                backgroundimage,
+                fit: BoxFit.fill,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              style: TextButton.styleFrom(padding: EdgeInsets.zero),
+              onPressed: () => hit(hits[2]),
+              child: Image.asset(
+                backgroundimage,
+                fit: BoxFit.fill,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              style: TextButton.styleFrom(padding: EdgeInsets.zero),
+              onPressed: () => hit(hits[3]),
+              child: Image.asset(
+                backgroundimage,
+                fit: BoxFit.fill,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              style: TextButton.styleFrom(padding: EdgeInsets.zero),
+              onPressed: () => hit(hits[4]),
+              child: Image.asset(
+                backgroundimage,
+                fit: BoxFit.fill,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
